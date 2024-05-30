@@ -26,7 +26,7 @@ const Sidebar: FC<Props> = () => {
 
         <div className={`mx-[56px] mt-[50px] flex items-center`}>
           <div className="mt-1 ml-1 h-2.5 font-poppins text-[26px] font-bold uppercase text-navy-700 dark:text-white">
-            Horizon <span className="font-medium">FREE</span>
+            BOBA <span className="font-medium">CHA</span>
           </div>
         </div>
 
@@ -38,9 +38,9 @@ const Sidebar: FC<Props> = () => {
         </ul>
 
         {/* Free Horizon Card */}
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <SidebarCard />
-        </div>
+        </div> */}
 
         {/* Nav item end */}
       </div>
