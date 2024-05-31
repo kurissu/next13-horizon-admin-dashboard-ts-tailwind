@@ -38,19 +38,19 @@ input:checked.defaultCheckbox::before {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px gray; 
+    box-shadow: inset 0 0 5px #CA884D; 
     border-radius: 50px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #4318FF; 
+    background: #7c4826; 
     border-radius: 20px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #868CFF;
+    background: #f2d595;
     cursor: pointer;
 }
 /* END SCROLLBAR */
