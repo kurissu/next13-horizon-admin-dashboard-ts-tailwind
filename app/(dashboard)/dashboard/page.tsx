@@ -5,9 +5,9 @@ import { FC } from 'react';
 import WeeklyRevenue from "./components/WeeklyRevenue";
 import TotalSpent from "./components/TotalSpent";
 import PieChartCard from "./components/PieChartCard";
-import { IoMdHome } from "react-icons/io";
+import { IoMdFemale, IoMdHome, IoMdMale } from "react-icons/io";
 import { IoDocuments } from "react-icons/io5";
-import { MdBarChart, MdDashboard } from "react-icons/md";
+import { MdBarChart, MdDashboard, MdOutlineDownload, MdOutlineSupervisorAccount, MdSupervisedUserCircle, MdVerifiedUser } from "react-icons/md";
 
 import { columnsDataCheck, columnsDataComplex } from "./variables/columnsData";
 
@@ -18,6 +18,7 @@ import DailyTraffic from "./components/DailyTraffic";
 import TaskCard from "./components/TaskCard";
 import tableDataCheck from "./variables/tableDataCheck.json";
 import tableDataComplex from "./variables/tableDataComplex.json";
+import PieChartCard2 from './components/PieChartCard2';
 
 const MiniCalendar = dynamic(() => import("@/components/calendar/MiniCalendar"), {
     loading: () => <p>loading...</p>,
@@ -30,74 +31,91 @@ const DashboardPage: FC<Props> = () => {
     return (
         <>
             {/* Card widget */}
-            <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
+            <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-5">
+
                 <Widget
-                    icon={<MdBarChart className="h-7 w-7" />}
-                    title={"Earnings"}
+                    icon={<MdVerifiedUser className="h-7 w-7" />}
+                    title={"Daily Active User"}
                     subtitle={"$340.5"}
                 />
                 <Widget
-                    icon={<IoDocuments className="h-6 w-6" />}
-                    title={"Spend this month"}
+                    icon={<MdSupervisedUserCircle className="h-6 w-6" />}
+                    title={"Montly Active User"}
                     subtitle={"$642.39"}
                 />
                 <Widget
                     icon={<MdBarChart className="h-7 w-7" />}
-                    title={"Sales"}
+                    title={"Visitors"}
                     subtitle={"$574.34"}
                 />
                 <Widget
-                    icon={<MdDashboard className="h-6 w-6" />}
-                    title={"Your Balance"}
+                    icon={<MdOutlineDownload className="h-6 w-6" />}
+                    title={"User Download"}
                     subtitle={"$1,000"}
                 />
                 <Widget
-                    icon={<MdBarChart className="h-7 w-7" />}
-                    title={"New Tasks"}
+                    icon={<MdOutlineSupervisorAccount className="h-7 w-7" />}
+                    title={"Register Account"}
                     subtitle={"145"}
                 />
-                <Widget
-                    icon={<IoMdHome className="h-6 w-6" />}
-                    title={"Total Projects"}
+                                <Widget
+                    icon={<IoMdMale className="h-6 w-6" />}
+                    title={"Male"}
+                    subtitle={"$2433"}
+                />
+                        <Widget
+                    icon={<IoMdFemale className="h-6 w-6" />}
+                    title={"Female"}
                     subtitle={"$2433"}
                 />
             </div>
+            
 
             {/* Charts */}
             <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
+                {/* <WeeklyRevenue /> */}
+                <PieChartCard />
                 <TotalSpent />
-                <WeeklyRevenue />
+            </div>
+            <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
+                {/* <WeeklyRevenue /> */}
+                <PieChartCard />
+                <PieChartCard />
             </div>
 
             {/* Tables & Charts */}
             <div className="mt-5 grid grid-cols-1 gap-5 xl:grid-cols-2">
+                    <DailyTraffic title={'จำนวนผู้เล่นที่ผ่าน หรือไม่ผ่านในระดับต่างๆ'} />
+                    <DailyTraffic title={'จำนวนผู้เล่นที่ challange สำเร็จ หรือไม่สำเร็จในระดับต่างๆ'}/>
                 {/* Check Table */}
                 <div>
-                    <CheckTable
+                    {/* <CheckTable
                         columnsData={columnsDataCheck}
                         tableData={tableDataCheck}
-                    />
+                    /> */}
+                                        <PieChartCard2 />
+
                 </div>
 
                 {/* Traffic chart & Pie Chart */}
-                <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-                    <DailyTraffic />
-                    <PieChartCard />
+                <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
+                    {/* <DailyTraffic /> */}
+                    <PieChartCard2 />
                 </div>
 
                 {/* Complex Table , Task & Calendar */}
-                <ComplexTable
+                {/* <ComplexTable
                     columnsData={columnsDataComplex}
                     tableData={tableDataComplex}
-                />
+                /> */}
 
                 {/* Task chart & Calendar */}
-                <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
+                {/* <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
                     <TaskCard />
                     <div className="grid grid-cols-1 rounded-[20px]">
                         <MiniCalendar />
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );

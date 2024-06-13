@@ -34,9 +34,15 @@ const PieChartCard = () => {
             series={pieChartData}
           />
         </div>
+        <div className="mb-auto flex h-[220px] w-full items-center justify-center">
+          <PieChart
+            // @ts-ignore
+            options={pieChartOptions}
+            series={pieChartData}
+          />
+        </div>
       </div>
       <div className="flex flex-row !justify-around rounded-2xl px-6 py-3 shadow-2xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-   
       <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-[#6AD2FF]" />

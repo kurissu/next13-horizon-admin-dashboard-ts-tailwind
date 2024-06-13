@@ -1,7 +1,7 @@
 export const barChartDataDailyTraffic = [
   {
     name: "Daily Traffic",
-    data: [20, 30, 40, 20, 45, 50, 30],
+    data: [20, 30, 40, 20],
   },
 ];
 
@@ -26,7 +26,7 @@ export const barChartOptionsDailyTraffic = {
     theme: "dark",
   },
   xaxis: {
-    categories: ["00", "04", "08", "12", "14", "16", "18"],
+    categories: ["00", "04", "08", "12"],
     show: false,
     labels: {
       show: true,
@@ -157,22 +157,22 @@ export const pieChartOptions = {
   },
 };
 
-export const pieChartData = [63, 25, 12];
+export const pieChartData = [20, 25, 12];
 
 export const barChartDataWeeklyRevenue = [
   {
     name: "PRODUCT A",
-    data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+    data: [400, 50],
     color: "#764B27",
   },
-  {
-    name: "PRODUCT B",
-    data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
-    color: "#CA884D",
-  },
+  // {
+  //   name: "PRODUCT B",
+  //   data: [400, 370],
+  //   color: "#CA884D",
+  // },
   {
     name: "PRODUCT C",
-    data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+    data: [400, 370],
     color: "#E57A75",
   },
 ];
@@ -200,7 +200,7 @@ export const barChartOptionsWeeklyRevenue = {
     },
   },
   xaxis: {
-    categories: ["17", "18", "19", "20", "21", "22", "23", "24", "25"],
+    categories: ["Success Top 5", "Unsuccess Top 1"],
     show: false,
     labels: {
       show: true,
@@ -272,11 +272,11 @@ export const lineChartDataTotalSpent = [
     data: [50, 64, 48, 66, 49, 68],
     color: "#764B27",
   },
-  {
-    name: "Profit",
-    data: [30, 40, 24, 46, 20, 46],
-    color: "#CA884D",
-  },
+  // {
+  //   name: "Profit",
+  //   data: [30, 40, 24, 46, 20, 46],
+  //   color: "#CA884D",
+  // },
 ];
 
 export const lineChartOptionsTotalSpent = {
