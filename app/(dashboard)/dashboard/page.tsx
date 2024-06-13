@@ -36,22 +36,22 @@ const DashboardPage: FC<Props> = () => {
                 <Widget
                     icon={<MdVerifiedUser className="h-7 w-7" />}
                     title={"Daily Active User"}
-                    subtitle={"$340.5"}
+                    subtitle={"340"}
                 />
                 <Widget
                     icon={<MdSupervisedUserCircle className="h-6 w-6" />}
                     title={"Montly Active User"}
-                    subtitle={"$642.39"}
+                    subtitle={"642"}
                 />
                 <Widget
                     icon={<MdBarChart className="h-7 w-7" />}
                     title={"Visitors"}
-                    subtitle={"$574.34"}
+                    subtitle={"574"}
                 />
                 <Widget
                     icon={<MdOutlineDownload className="h-6 w-6" />}
                     title={"User Download"}
-                    subtitle={"$1,000"}
+                    subtitle={"1000"}
                 />
                 <Widget
                     icon={<MdOutlineSupervisorAccount className="h-7 w-7" />}
@@ -61,12 +61,12 @@ const DashboardPage: FC<Props> = () => {
                                 <Widget
                     icon={<IoMdMale className="h-6 w-6" />}
                     title={"Male"}
-                    subtitle={"$2433"}
+                    subtitle={"433"}
                 />
                         <Widget
                     icon={<IoMdFemale className="h-6 w-6" />}
                     title={"Female"}
-                    subtitle={"$2433"}
+                    subtitle={"633"}
                 />
             </div>
             
