@@ -7,13 +7,17 @@ const PieChart = dynamic(() => import("@/components/charts/PieChart"), {
   ssr: false
 })
 
-const PieChartCard = () => {
+export interface IProps {
+  title:string;
+}
+
+const PieChartCard = ({ title }: IProps) => {
   return (
     <Card className="rounded-[20px] p-3">
       <div className="flex flex-row justify-between px-3 pt-2">
         <div>
           <h4 className="text-lg font-bold text-navy-700 dark:text-white">
-            Your Pie Chart
+            {title}
           </h4>
         </div>
 

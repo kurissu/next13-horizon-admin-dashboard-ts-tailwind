@@ -74,13 +74,13 @@ const DashboardPage: FC<Props> = () => {
             {/* Charts */}
             <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
                 {/* <WeeklyRevenue /> */}
-                <PieChartCard />
+                <PieChartCard  title={'ผู้เล่นใช้เวลาตัดสินใจกี่วินาทีเพื่อที่จะกดปุ่ม เข้าสู่ระบบ'} />
                 <TotalSpent />
             </div>
             <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
                 {/* <WeeklyRevenue /> */}
-                <PieChartCard />
-                <PieChartCard />
+                <PieChartCard title={"ผู้เล่นใช้เวลาตัดสินใจกี่วินาทีก่อนจะเลือกเมนู"}/>
+                <PieChartCard title={'ผู้เล่นใช้เวลากี่วินาทีในการประกอบส่วนผสมต่อ 1 รายการ'} />
             </div>
 
             {/* Tables & Charts */}
@@ -93,14 +93,14 @@ const DashboardPage: FC<Props> = () => {
                         columnsData={columnsDataCheck}
                         tableData={tableDataCheck}
                     /> */}
-                                        <PieChartCard2 />
+                                        <PieChartCard2 title={'เวลาของผู้เล่นที่เลือกจะ challange หลังจากที่สามารถทำได้แล้ว'} />
 
                 </div>
 
                 {/* Traffic chart & Pie Chart */}
                 <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
                     {/* <DailyTraffic /> */}
-                    <PieChartCard2 />
+                    <PieChartCard2 title={'เวลาที่ผู้เล่นดู หรืออยู่ในหน้าสรุปผลการเล่นของรอบนั้นๆ'} />
                 </div>
 
                 {/* Complex Table , Task & Calendar */}
