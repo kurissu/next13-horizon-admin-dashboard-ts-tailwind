@@ -17,7 +17,7 @@ export default function Home() {
   return (
 
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <Unity unityProvider={unityProvider} style={{ width: 440 , height: 600}}/>
+        <Unity unityProvider={unityProvider} style={{ width: 340 , height: 600}}/>
     </main>
 
   )
