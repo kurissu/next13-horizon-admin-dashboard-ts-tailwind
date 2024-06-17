@@ -27,12 +27,12 @@ const routes = [
   //   icon: <MdOutlineShoppingCart className="h-6 w-6" />,
   //   secondary: true,
   // },
-  {
-    name: "Data Tables",
-    layout: "/dashboard",
-    icon: <MdBarChart className="h-6 w-6" />,
-    path: "data-tables",
-  },
+  // {
+  //   name: "Data Tables",
+  //   layout: "/dashboard",
+  //   icon: <MdBarChart className="h-6 w-6" />,
+  //   path: "data-tables",
+  // },
   // {
   //   name: "Profile",
   //   layout: "/dashboard",
