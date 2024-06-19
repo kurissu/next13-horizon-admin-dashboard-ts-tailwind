@@ -10,9 +10,9 @@ const PieChart = dynamic(() => import("@/components/charts/PieChart"), {
 export interface IProps {
   title:string;
   data: number[];
-  options: {};
+  options: {labels:string[]};
   data2: number[];
-  options2: {};
+  options2: {labels:string[]};
 }
 const PieChartCard = ({ title,data,options,data2,options2 }: IProps) => {
   return (
