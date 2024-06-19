@@ -9,9 +9,12 @@ const PieChart = dynamic(() => import("@/components/charts/PieChart"), {
 
 export interface IProps {
   title:string;
+  data: number[];
+  options: {};
 }
 
-const PieChartCard = ({ title }: IProps) => {
+const PieChartCard = ({ title, data, options }: IProps) => {
+  console.log(options)
   return (
     <Card className="rounded-[20px] p-3">
       <div className="flex flex-row justify-between px-3 pt-2">
@@ -34,8 +37,8 @@ const PieChartCard = ({ title }: IProps) => {
         <div className="mb-auto flex h-[220px] w-full items-center justify-center">
           <PieChart
             // @ts-ignore
-            options={pieChartOptions}
-            series={pieChartData}
+            options={options}
+            series={data}
           />
         </div>
       </div>
@@ -44,10 +47,10 @@ const PieChartCard = ({ title }: IProps) => {
       <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-[#6AD2FF]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">System</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">{options.labels[0]}</p>
           </div>
           <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
-            25%
+            {data[0]}%
           </p>
         </div>
 
@@ -56,10 +59,10 @@ const PieChartCard = ({ title }: IProps) => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-[#6AD2FF]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">System</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">{options.labels[1]}</p>
           </div>
           <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
-            25%
+            {data[1]}%
           </p>
         </div>
 
@@ -68,10 +71,10 @@ const PieChartCard = ({ title }: IProps) => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-[#6AD2FF]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">System</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">{options.labels[2]}</p>
           </div>
           <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
-            25%
+            {data[2]}%
           </p>
         </div>
       </div>
