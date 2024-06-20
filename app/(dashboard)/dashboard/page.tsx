@@ -5,7 +5,6 @@ import { FC } from 'react';
 import MultiBar from "./components/WeeklyRevenue";
 import TotalSpent from "./components/TotalSpent";
 import PieChartCard from "./components/PieChartCard";
-import TestPieChart from './components/TestPieChart';
 import { IoIosApps, IoLogoAndroid, IoLogoApple, IoMdFemale, IoMdHome, IoMdMale } from "react-icons/io";
 import { IoDocuments } from "react-icons/io5";
 import { MdBarChart, MdDashboard, MdOutlineDownload, MdOutlineSupervisorAccount, MdSupervisedUserCircle, MdVerifiedUser } from "react-icons/md";
@@ -31,7 +30,7 @@ const MiniCalendar = dynamic(() => import("@/components/calendar/MiniCalendar"),
 
 type Props = {};
 
-export const pieChartOptions = {
+const pieChartOptions = {
     labels: ["ช่วงเวลา 0.1 - 0.5 วินาที", "ช่วงเวลา 0.5 - 0.10 วินาที", "ช่วงเวลา 0.10 - 0.15 วินาที"],
     colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
     chart: {
@@ -75,7 +74,7 @@ export const pieChartOptions = {
     },
   };
 
-  export const pieChartOptions2 = {
+const pieChartOptions2 = {
     labels: ["Your files", "System", "Empty"],
     colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
     chart: {
