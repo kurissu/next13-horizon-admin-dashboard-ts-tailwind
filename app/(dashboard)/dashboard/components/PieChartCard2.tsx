@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { pieChartData, pieChartOptions } from "@/data/charts";
+import { pieChartData } from "@/data/charts";
 import Card from "@/components/card";
 
 const PieChart = dynamic(() => import("@/components/charts/PieChart"), {
@@ -10,11 +10,99 @@ const PieChart = dynamic(() => import("@/components/charts/PieChart"), {
 export interface IProps {
   title:string;
   data: number[];
-  options: {labels:string[]};
+  labels: string[];
   data2: number[];
-  options2: {labels:string[]};
+  labels2: string[];
 }
-const PieChartCard = ({ title,data,options,data2,options2 }: IProps) => {
+const pieChartOptions = {
+  labels: ["Your files", "System", "Empty"],
+  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  chart: {
+    width: "50px",
+  },
+  states: {
+    hover: {
+      filter: {
+        type: "none",
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  hover: { mode: null },
+  plotOptions: {
+    donut: {
+      expandOnClick: false,
+      donut: {
+        labels: {
+          show: false,
+        },
+      },
+    },
+  },
+  fill: {
+    colors: ["#764B27", "#CA884D", "#E57A75"],
+  },
+  tooltip: {
+    enabled: true,
+    theme: "dark",
+    style: {
+      fontSize: "12px",
+      fontFamily: undefined,
+      backgroundColor: "#000000"
+    },
+  },
+};
+const pieChartOptions2 = {
+  labels: ["Your files", "System", "Empty"],
+  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  chart: {
+    width: "50px",
+  },
+  states: {
+    hover: {
+      filter: {
+        type: "none",
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  hover: { mode: null },
+  plotOptions: {
+    donut: {
+      expandOnClick: false,
+      donut: {
+        labels: {
+          show: false,
+        },
+      },
+    },
+  },
+  fill: {
+    colors: ["#764B27", "#CA884D", "#E57A75"],
+  },
+  tooltip: {
+    enabled: true,
+    theme: "dark",
+    style: {
+      fontSize: "12px",
+      fontFamily: undefined,
+      backgroundColor: "#000000"
+    },
+  },
+};
+const PieChartCard = ({ title,data,labels,data2,labels2 }: IProps) => {
+  pieChartOptions.labels = labels;
+  pieChartOptions2.labels = labels2;
   return (
     <Card className="rounded-[20px] p-3">
       <div className="flex flex-row justify-between px-3 pt-2">
@@ -37,14 +125,14 @@ const PieChartCard = ({ title,data,options,data2,options2 }: IProps) => {
         <div className="mb-auto flex h-[220px] w-full items-center justify-center">
           <PieChart
             // @ts-ignore
-            options={options}
+            options={pieChartOptions}
             series={data}
           />
         </div>
         <div className="mb-auto flex h-[220px] w-full items-center justify-center">
           <PieChart
             // @ts-ignore
-            options={options2}
+            options={pieChartOptions2}
             series={data2}
           />
         </div>
@@ -53,7 +141,7 @@ const PieChartCard = ({ title,data,options,data2,options2 }: IProps) => {
       <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-[#6AD2FF]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">{options.labels[0]}</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">{pieChartOptions.labels[0]}</p>
           </div>
           <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
             {data[0]}%
@@ -65,7 +153,7 @@ const PieChartCard = ({ title,data,options,data2,options2 }: IProps) => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-[#6AD2FF]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">{options.labels[1]}</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">{pieChartOptions.labels[1]}</p>
           </div>
           <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
             {data[1]}%
@@ -77,7 +165,7 @@ const PieChartCard = ({ title,data,options,data2,options2 }: IProps) => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-[#6AD2FF]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">{options.labels[2]}</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">{pieChartOptions.labels[2]}</p>
           </div>
           <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
             {data[2]}%
@@ -90,7 +178,7 @@ const PieChartCard = ({ title,data,options,data2,options2 }: IProps) => {
       <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-[#6AD2FF]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">{options.labels[0]}</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">{pieChartOptions2.labels[0]}</p>
           </div>
           <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
             {data[0]}%
@@ -102,7 +190,7 @@ const PieChartCard = ({ title,data,options,data2,options2 }: IProps) => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-[#6AD2FF]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">{options.labels[1]}</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">{pieChartOptions2.labels[1]}</p>
           </div>
           <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
             {data[1]}%
@@ -114,7 +202,7 @@ const PieChartCard = ({ title,data,options,data2,options2 }: IProps) => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-[#6AD2FF]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">{options.labels[2]}</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">{pieChartOptions2.labels[2]}</p>
           </div>
           <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
             {data[2]}%

@@ -6,7 +6,7 @@ import {
 } from "react-icons/md";
 import Card from "@/components/card";
 import {
-  lineChartDataTotalSpent,
+  // lineChartDataTotalSpent,
   lineChartOptionsTotalSpent,
 } from "@/data/charts";
 
@@ -18,8 +18,25 @@ const LineChart = dynamic(() => import("@/components/charts/LineChart"), {
 
 export interface IProps {
   title:string;
+  total:string;
+  data?: { name: string, data: number[], color: string }[];
 }
-const TotalSpent = ({ title }: IProps) => {
+
+ const lineChartDataTotalSpent = [
+  {
+    name: "Revenue",
+    data: [50, 64, 48, 66, 49, 68],
+    color: "#764B27",
+  },
+  // {
+  //   name: "Profit",
+  //   data: [30, 40, 24, 46, 20, 46],
+  //   color: "#CA884D",
+  // },
+];
+
+const TotalSpent = ({ title, total, data }: IProps) => {
+  console.log(data)
   return (
     <Card className="!p-[20px] text-center">
       <div className="flex justify-between">
@@ -35,7 +52,7 @@ const TotalSpent = ({ title }: IProps) => {
       <div className="flex h-full w-full flex-row justify-between sm:flex-wrap lg:flex-nowrap 2xl:overflow-hidden">
         <div className="flex flex-col">
           <p className="mt-[20px] text-3xl font-bold text-navy-700 dark:text-white">
-            37.5K
+            {total}
           </p>
           {/* <div className="flex flex-col items-start">
             <p className="mt-2 text-sm text-gray-600">Total Spent</p>
@@ -49,7 +66,7 @@ const TotalSpent = ({ title }: IProps) => {
           <LineChart
             // @ts-ignore
             options={lineChartOptionsTotalSpent}
-            series={lineChartDataTotalSpent}
+            series={data}
           />
         </div>
       </div>

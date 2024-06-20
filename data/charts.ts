@@ -165,11 +165,11 @@ export const barChartDataWeeklyRevenue = [
     data: [400, 50],
     color: "#764B27",
   },
-  // {
-  //   name: "PRODUCT B",
-  //   data: [400, 370],
-  //   color: "#CA884D",
-  // },
+  {
+    name: "PRODUCT B",
+    data: [400, 370],
+    color: "#CA884D",
+  },
   {
     name: "PRODUCT C",
     data: [400, 370],
@@ -281,7 +281,7 @@ export const lineChartDataTotalSpent = [
 
 export const lineChartOptionsTotalSpent = {
   legend: {
-    show: false,
+    show: true,
   },
 
   theme: {
@@ -332,7 +332,7 @@ export const lineChartOptionsTotalSpent = {
     },
     type: "text",
     range: undefined,
-    categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB"],
+    categories: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN"],
   },
 
   yaxis: {

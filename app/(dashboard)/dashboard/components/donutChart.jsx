@@ -10,7 +10,7 @@ function Example({title}) {
             data: {
                 labels: ["Accepted", "Pending", "Rejected",'test'],
                 datasets: [{
-                    data: [70, 10, 6],
+                    data: [70, 10, 6,32],
                     borderColor: [
                         "rgb(75, 192, 192)",
                         "rgb(255, 205, 86)",
