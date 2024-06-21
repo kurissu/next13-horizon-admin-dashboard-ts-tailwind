@@ -179,7 +179,7 @@ export const barChartDataWeeklyRevenue = [
 
 export const barChartOptionsWeeklyRevenue = {
   chart: {
-    stacked: true,
+    stacked: false,
     toolbar: {
       show: false,
     },

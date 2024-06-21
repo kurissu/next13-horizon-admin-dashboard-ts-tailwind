@@ -1,5 +1,5 @@
 // import { barChartDataDailyTraffic } from "@/data/charts";
-// import { barChartOptionsDailyTraffic } from "@/data/charts";
+import { barChartOptionsDailyTraffic } from "@/data/charts";
 import { MdArrowDropUp } from "react-icons/md";
 import Card from "@/components/card";
 import dynamic from "next/dynamic";
@@ -11,125 +11,13 @@ const BarChart = dynamic(() => import("@/components/charts/BarChart"), {
 export interface IProps {
   title:string;
   data?: {name: string, data: number[]}[];
-  categories?: string[];
+  categories: string[];
 }
 
- const barChartDataDailyTraffic = [
-  {
-    name: "Daily Traffic",
-    data: [20, 30, 40, 20],
-  },
-];
-
-const barChartOptionsDailyTraffic = {
-  chart: {
-    toolbar: {
-      show: false,
-    },
-  },
-  tooltip: {
-    style: {
-      fontSize: "12px",
-      fontFamily: undefined,
-      backgroundColor: "#000000"
-    },
-    onDatasetHover: {
-      style: {
-        fontSize: "12px",
-        fontFamily: undefined,
-      },
-    },
-    theme: "dark",
-  },
-  xaxis: {
-    categories: ["00", "04", "08", "12"],
-    show: false,
-    labels: {
-      show: true,
-      style: {
-        colors: "#764B27",
-        fontSize: "14px",
-        fontWeight: "500",
-      },
-    },
-    axisBorder: {
-      show: false,
-    },
-    axisTicks: {
-      show: false,
-    },
-  },
-  yaxis: {
-    show: false,
-    color: "black",
-    labels: {
-      show: true,
-      style: {
-        colors: "#CA884D",
-        fontSize: "14px",
-      },
-    },
-  },
-  grid: {
-    show: false,
-    strokeDashArray: 5,
-    yaxis: {
-      lines: {
-        show: true,
-      },
-    },
-    xaxis: {
-      lines: {
-        show: false,
-      },
-    },
-  },
-  fill: {
-    type: "gradient",
-    gradient: {
-      type: "vertical",
-      shadeIntensity: 1,
-      opacityFrom: 0.7,
-      opacityTo: 0.9,
-      colorStops: [
-        [
-          {
-            offset: 0,
-            color: "#764B27",
-            opacity: 1,
-          },
-          {
-            offset: 100,
-            color: "#CA884D",
-            opacity: 0.28,
-          },
-        ],
-      ],
-    },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  plotOptions: {
-    bar: {
-      borderRadius: 10,
-      columnWidth: "25px",
-    },
-  },
-  responsive: [{
-    breakpoint: 1368,
-    options: {
-      plotOptions: {
-        bar: {
-          borderRadius: 5,
-          columnWidth: "10px",
-        },
-      },
-    },
-  }]
-};
 
 const DailyTraffic = ({ title, data, categories }: IProps) => {
+  let myOptions = barChartOptionsDailyTraffic;
+  myOptions.xaxis.categories = categories;
   return (
     <Card className="pb-7 p-[20px]">
       <div className="flex flex-row justify-between">
@@ -156,7 +44,7 @@ const DailyTraffic = ({ title, data, categories }: IProps) => {
         <BarChart
           chartData={data}
           // @ts-ignore
-          chartOptions={barChartOptionsDailyTraffic}
+          chartOptions={myOptions}
         />
       </div>
     </Card>
