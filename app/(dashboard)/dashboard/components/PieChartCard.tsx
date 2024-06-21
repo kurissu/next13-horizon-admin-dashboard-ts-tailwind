@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { pieChartData } from "@/data/charts";
+import { pieChartData, pieChartOptions } from "@/data/charts";
 import Card from "@/components/card";
 
 const PieChart = dynamic(() => import("@/components/charts/PieChart"), {
@@ -13,49 +13,49 @@ export interface IProps {
   labels: string[];
 }
 
-const pieChartOptions = {
-  labels: ["Your files", "System", "Empty"],
-  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
-  chart: {
-    width: "50px",
-  },
-  states: {
-    hover: {
-      filter: {
-        type: "none",
-      },
-    },
-  },
-  legend: {
-    show: false,
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  hover: { mode: null },
-  plotOptions: {
-    donut: {
-      expandOnClick: false,
-      donut: {
-        labels: {
-          show: false,
-        },
-      },
-    },
-  },
-  fill: {
-    colors: ["#764B27", "#CA884D", "#E57A75"],
-  },
-  tooltip: {
-    enabled: true,
-    theme: "dark",
-    style: {
-      fontSize: "12px",
-      fontFamily: undefined,
-      backgroundColor: "#000000"
-    },
-  },
-};
+// const pieChartOptions = {
+//   labels: ["Your files", "System", "Empty"],
+//   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+//   chart: {
+//     width: "50px",
+//   },
+//   states: {
+//     hover: {
+//       filter: {
+//         type: "none",
+//       },
+//     },
+//   },
+//   legend: {
+//     show: false,
+//   },
+//   dataLabels: {
+//     enabled: false,
+//   },
+//   hover: { mode: null },
+//   plotOptions: {
+//     donut: {
+//       expandOnClick: false,
+//       donut: {
+//         labels: {
+//           show: false,
+//         },
+//       },
+//     },
+//   },
+//   fill: {
+//     colors: ["#764B27", "#CA884D", "#E57A75"],
+//   },
+//   tooltip: {
+//     enabled: true,
+//     theme: "dark",
+//     style: {
+//       fontSize: "12px",
+//       fontFamily: undefined,
+//       backgroundColor: "#000000"
+//     },
+//   },
+// };
 
 const PieChartCard = ({ title, data, labels }: IProps) => {
   console.log(labels)
