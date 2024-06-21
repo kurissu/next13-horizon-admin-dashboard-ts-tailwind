@@ -202,6 +202,11 @@ const DashboardPage: FC<Props> = () => {
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
           <DailyTraffic
             title={"เวลาที่ผู้เล่นดู หรืออยู่ในหน้าสรุปผลการเล่นของรอบนั้นๆ"}
+            data={[{
+              name: "Daily Traffic",
+              data: [20, 30, 40, 20]
+            }]}
+            categories={["123", "204", "2", "2"]}
           />
         </div>
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
