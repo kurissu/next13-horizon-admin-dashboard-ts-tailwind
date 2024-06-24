@@ -1,9 +1,5 @@
 import Card from "@/components/card";
 import dynamic from "next/dynamic";
-import {
-  barChartDataWeeklyRevenue,
-  barChartOptionsWeeklyRevenue,
-} from "@/data/charts";
 import { MdBarChart } from "react-icons/md";
 
 const BarChart = dynamic(() => import("@/components/charts/BarChart"), {
@@ -13,13 +9,10 @@ const BarChart = dynamic(() => import("@/components/charts/BarChart"), {
 export interface IProps {
   title:string;
   data?: {name: string, data: number[], color: string}[];
-  categories: string[];
+  categories: {};
 }
 
-
 const WeeklyRevenue = ({title, data, categories}:IProps) => {
-  let myOptions = barChartOptionsWeeklyRevenue;
-  myOptions.xaxis.categories = categories
   return (
     <Card className="flex flex-col bg-white w-full rounded-3xl py-6 px-2 text-center">
       <div className="mb-auto flex items-center justify-between px-6">
@@ -35,7 +28,7 @@ const WeeklyRevenue = ({title, data, categories}:IProps) => {
           <BarChart
             chartData={data}
             // @ts-ignore
-            chartOptions={myOptions}
+            chartOptions={categories}
           />
         </div>
       </div>

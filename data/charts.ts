@@ -15,7 +15,7 @@ export const barChartOptionsDailyTraffic = {
     style: {
       fontSize: "12px",
       fontFamily: undefined,
-      backgroundColor: "#000000"
+      backgroundColor: "#000000",
     },
     onDatasetHover: {
       style: {
@@ -26,7 +26,12 @@ export const barChartOptionsDailyTraffic = {
     theme: "dark",
   },
   xaxis: {
-    categories: ["00", "04", "08", "12"],
+    categories: [
+      "Completed Male Player",
+      "Completed Female Player?",
+      "UnCompleted Male Player",
+      "UnCompleted Female Player?",
+    ],
     show: false,
     labels: {
       show: true,
@@ -100,21 +105,250 @@ export const barChartOptionsDailyTraffic = {
       columnWidth: "25px",
     },
   },
-  responsive: [{
-    breakpoint: 1368,
-    options: {
-      plotOptions: {
-        bar: {
-          borderRadius: 5,
-          columnWidth: "10px",
+  responsive: [
+    {
+      breakpoint: 1368,
+      options: {
+        plotOptions: {
+          bar: {
+            borderRadius: 5,
+            columnWidth: "10px",
+          },
         },
       },
     },
-  }]
+  ],
+};
+export const barChartOptionsDailyTraffic2 = {
+  chart: {
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    style: {
+      fontSize: "12px",
+      fontFamily: undefined,
+      backgroundColor: "#000000",
+    },
+    onDatasetHover: {
+      style: {
+        fontSize: "12px",
+        fontFamily: undefined,
+      },
+    },
+    theme: "dark",
+  },
+  xaxis: {
+    categories: [
+      "Unsuccessful Rank 1 Male",
+      "Successful Rank 5 Male",
+      "Unsuccessful Rank 1 Female",
+      "Successful Rank 5 Female",
+    ],
+    show: false,
+    labels: {
+      show: true,
+      style: {
+        colors: "#764B27",
+        fontSize: "14px",
+        fontWeight: "500",
+      },
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+    color: "black",
+    labels: {
+      show: true,
+      style: {
+        colors: "#CA884D",
+        fontSize: "14px",
+      },
+    },
+  },
+  grid: {
+    show: false,
+    strokeDashArray: 5,
+    yaxis: {
+      lines: {
+        show: true,
+      },
+    },
+    xaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      type: "vertical",
+      shadeIntensity: 1,
+      opacityFrom: 0.7,
+      opacityTo: 0.9,
+      colorStops: [
+        [
+          {
+            offset: 0,
+            color: "#764B27",
+            opacity: 1,
+          },
+          {
+            offset: 100,
+            color: "#CA884D",
+            opacity: 0.28,
+          },
+        ],
+      ],
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  plotOptions: {
+    bar: {
+      borderRadius: 10,
+      columnWidth: "25px",
+    },
+  },
+  responsive: [
+    {
+      breakpoint: 1368,
+      options: {
+        plotOptions: {
+          bar: {
+            borderRadius: 5,
+            columnWidth: "10px",
+          },
+        },
+      },
+    },
+  ],
+};
+export const barChartOptionsDailyTraffic3 = {
+  chart: {
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    style: {
+      fontSize: "12px",
+      fontFamily: undefined,
+      backgroundColor: "#000000",
+    },
+    onDatasetHover: {
+      style: {
+        fontSize: "12px",
+        fontFamily: undefined,
+      },
+    },
+    theme: "dark",
+  },
+  xaxis: {
+    categories: ["MT1", "MT2", "MT3", "FT1", "FT2", "FT3"],
+    show: false,
+    labels: {
+      show: true,
+      style: {
+        colors: "#764B27",
+        fontSize: "14px",
+        fontWeight: "500",
+      },
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+    color: "black",
+    labels: {
+      show: true,
+      style: {
+        colors: "#CA884D",
+        fontSize: "14px",
+      },
+    },
+  },
+  grid: {
+    show: false,
+    strokeDashArray: 5,
+    yaxis: {
+      lines: {
+        show: true,
+      },
+    },
+    xaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      type: "vertical",
+      shadeIntensity: 1,
+      opacityFrom: 0.7,
+      opacityTo: 0.9,
+      colorStops: [
+        [
+          {
+            offset: 0,
+            color: "#764B27",
+            opacity: 1,
+          },
+          {
+            offset: 100,
+            color: "#CA884D",
+            opacity: 0.28,
+          },
+        ],
+      ],
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  plotOptions: {
+    bar: {
+      borderRadius: 10,
+      columnWidth: "25px",
+    },
+  },
+  responsive: [
+    {
+      breakpoint: 1368,
+      options: {
+        plotOptions: {
+          bar: {
+            borderRadius: 5,
+            columnWidth: "10px",
+          },
+        },
+      },
+    },
+  ],
 };
 
 export const pieChartOptions = {
-  labels: ["Your files", "System", "Empty"],
+  labels: [
+    "Male Reaction 0.1-0.10",
+    "Male Reaction less than 0.10",
+    "Male with no Reaction",
+  ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
   chart: {
     width: "50px",
@@ -152,7 +386,242 @@ export const pieChartOptions = {
     style: {
       fontSize: "12px",
       fontFamily: undefined,
-      backgroundColor: "#000000"
+      backgroundColor: "#000000",
+    },
+  },
+};
+export const pieChartOptions2 = {
+  labels: [
+    "Female Reaction 0.1-0.10",
+    "Female Reaction less than 0.10",
+    "Female with no Reaction",
+  ],
+  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  chart: {
+    width: "50px",
+  },
+  states: {
+    hover: {
+      filter: {
+        type: "none",
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  hover: { mode: null },
+  plotOptions: {
+    donut: {
+      expandOnClick: false,
+      donut: {
+        labels: {
+          show: false,
+        },
+      },
+    },
+  },
+  fill: {
+    colors: ["#764B27", "#CA884D", "#E57A75"],
+  },
+  tooltip: {
+    enabled: true,
+    theme: "dark",
+    style: {
+      fontSize: "12px",
+      fontFamily: undefined,
+      backgroundColor: "#000000",
+    },
+  },
+};
+export const pieChart2Options1 = {
+  labels: [
+    "Male Reaction 0.5",
+    "Male Reaction Slower than 0.10",
+    "Male with no Reaction",
+  ],
+  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  chart: {
+    width: "50px",
+  },
+  states: {
+    hover: {
+      filter: {
+        type: "none",
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  hover: { mode: null },
+  plotOptions: {
+    donut: {
+      expandOnClick: false,
+      donut: {
+        labels: {
+          show: false,
+        },
+      },
+    },
+  },
+  fill: {
+    colors: ["#764B27", "#CA884D", "#E57A75"],
+  },
+  tooltip: {
+    enabled: true,
+    theme: "dark",
+    style: {
+      fontSize: "12px",
+      fontFamily: undefined,
+      backgroundColor: "#000000",
+    },
+  },
+};
+export const pieChart2Options2 = {
+  labels: [
+    "Female Reaction 0.5",
+    "Female Reaction Slower than 0.10",
+    "Female with no Reaction",
+  ],
+  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  chart: {
+    width: "50px",
+  },
+  states: {
+    hover: {
+      filter: {
+        type: "none",
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  hover: { mode: null },
+  plotOptions: {
+    donut: {
+      expandOnClick: false,
+      donut: {
+        labels: {
+          show: false,
+        },
+      },
+    },
+  },
+  fill: {
+    colors: ["#764B27", "#CA884D", "#E57A75"],
+  },
+  tooltip: {
+    enabled: true,
+    theme: "dark",
+    style: {
+      fontSize: "12px",
+      fontFamily: undefined,
+      backgroundColor: "#000000",
+    },
+  },
+};
+export const pieChart2Options3 = {
+  labels: [
+    "Male Reaction 0.5",
+    "Male Reaction Slower than 0.10",
+    "Male with no Reaction",
+  ],
+  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  chart: {
+    width: "50px",
+  },
+  states: {
+    hover: {
+      filter: {
+        type: "none",
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  hover: { mode: null },
+  plotOptions: {
+    donut: {
+      expandOnClick: false,
+      donut: {
+        labels: {
+          show: false,
+        },
+      },
+    },
+  },
+  fill: {
+    colors: ["#764B27", "#CA884D", "#E57A75"],
+  },
+  tooltip: {
+    enabled: true,
+    theme: "dark",
+    style: {
+      fontSize: "12px",
+      fontFamily: undefined,
+      backgroundColor: "#000000",
+    },
+  },
+};
+export const pieChart2Options4 = {
+  labels: [
+    "Female Reaction 0.5",
+    "Female Reaction Slower than 0.10",
+    "Female with no Reaction",
+  ],
+  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  chart: {
+    width: "50px",
+  },
+  states: {
+    hover: {
+      filter: {
+        type: "none",
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  hover: { mode: null },
+  plotOptions: {
+    donut: {
+      expandOnClick: false,
+      donut: {
+        labels: {
+          show: false,
+        },
+      },
+    },
+  },
+  fill: {
+    colors: ["#764B27", "#CA884D", "#E57A75"],
+  },
+  tooltip: {
+    enabled: true,
+    theme: "dark",
+    style: {
+      fontSize: "12px",
+      fontFamily: undefined,
+      backgroundColor: "#000000",
     },
   },
 };
@@ -189,9 +658,9 @@ export const barChartOptionsWeeklyRevenue = {
     style: {
       fontSize: "12px",
       fontFamily: undefined,
-      backgroundColor: "#000000"
+      backgroundColor: "#000000",
     },
-    theme: 'dark',
+    theme: "dark",
     onDatasetHover: {
       style: {
         fontSize: "12px",
@@ -200,7 +669,10 @@ export const barChartOptionsWeeklyRevenue = {
     },
   },
   xaxis: {
-    categories: ["Success Top 5", "Unsuccess Top 1"],
+    categories: [
+      " ที่ผู้เล่นเข้ามาในหน้าเข้าสู่ระบบ",
+      " ที่ผู้เล่นกดปุ่มเข้าสู่ระบบครั้งแรก",
+    ],
     show: false,
     labels: {
       show: true,
@@ -306,9 +778,9 @@ export const lineChartOptionsTotalSpent = {
     style: {
       fontSize: "12px",
       fontFamily: undefined,
-      backgroundColor: "#000000"
+      backgroundColor: "#000000",
     },
-    theme: 'dark',
+    theme: "dark",
     x: {
       format: "dd/MM/yy HH:mm",
     },
