@@ -8,8 +8,12 @@ function Example({title, data}) {
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'line',
-            data: data
+            data: data,
+            option: {
+              responsive: true
+            }
         });
+        // myChart
     }, [data])
 
 
@@ -22,7 +26,7 @@ function Example({title, data}) {
                 </h4>
               </div>
               <div className='border border-gray-400 pt-0 rounded-xl w-full h-fit my-auto shadow-xl'>
-                    <canvas id='myChart'></canvas>
+                    <canvas id='myChart' className="w-full h-48"></canvas>
                 </div>
             </div>
           </Card>
