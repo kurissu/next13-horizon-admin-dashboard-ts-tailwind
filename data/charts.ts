@@ -439,9 +439,9 @@ export const pieChartOptions2 = {
 };
 export const pieChart2Options1 = {
   labels: [
-    "Male Reaction 60 sec",
-    "Male Reaction Slower than 60 sec",
-    "Male with no Reaction",
+    "Reaction 60 sec",
+    "Reaction less than 60 sec",
+    "No Reaction",
   ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
   chart: {
@@ -486,9 +486,9 @@ export const pieChart2Options1 = {
 };
 export const pieChart2Options2 = {
   labels: [
-    "Female Reaction 60 sec",
-    "Female Reaction Slower than 60 sec",
-    "Female with no Reaction",
+    "Reaction 60 sec",
+    "Reaction less than 60 sec",
+    "No Reaction",
   ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
   chart: {
