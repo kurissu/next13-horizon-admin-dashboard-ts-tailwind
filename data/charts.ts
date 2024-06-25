@@ -345,9 +345,9 @@ export const barChartOptionsDailyTraffic3 = {
 
 export const pieChartOptions = {
   labels: [
-    "Male Reaction 0.1-0.10",
-    "Male Reaction less than 0.10",
-    "Male with no Reaction",
+    "1 - 30 seconds",
+    "30 - 60 seconds",
+    "1 miniute up",
   ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
   chart: {
@@ -392,9 +392,9 @@ export const pieChartOptions = {
 };
 export const pieChartOptions2 = {
   labels: [
-    "Female Reaction 0.1-0.10",
-    "Female Reaction less than 0.10",
-    "Female with no Reaction",
+    "1 - 30 seconds",
+    "30 - 60 seconds",
+    "1 miniute up",
   ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
   chart: {
@@ -439,8 +439,8 @@ export const pieChartOptions2 = {
 };
 export const pieChart2Options1 = {
   labels: [
-    "Male Reaction 0.5",
-    "Male Reaction Slower than 0.10",
+    "Male Reaction 60 sec",
+    "Male Reaction Slower than 60 sec",
     "Male with no Reaction",
   ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
@@ -486,8 +486,8 @@ export const pieChart2Options1 = {
 };
 export const pieChart2Options2 = {
   labels: [
-    "Female Reaction 0.5",
-    "Female Reaction Slower than 0.10",
+    "Female Reaction 60 sec",
+    "Female Reaction Slower than 60 sec",
     "Female with no Reaction",
   ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
@@ -533,8 +533,8 @@ export const pieChart2Options2 = {
 };
 export const pieChart2Options3 = {
   labels: [
-    "Male Reaction 0.5",
-    "Male Reaction Slower than 0.10",
+    "Male Reaction 60 sec",
+    "Male Reaction Slower than 60 sec",
     "Male with no Reaction",
   ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
@@ -580,8 +580,8 @@ export const pieChart2Options3 = {
 };
 export const pieChart2Options4 = {
   labels: [
-    "Female Reaction 0.5",
-    "Female Reaction Slower than 0.10",
+    "Female Reaction 60 sec",
+    "Female Reaction Slower than 60 sec",
     "Female with no Reaction",
   ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
@@ -670,8 +670,8 @@ export const barChartOptionsWeeklyRevenue = {
   },
   xaxis: {
     categories: [
-      " ที่ผู้เล่นเข้ามาในหน้าเข้าสู่ระบบ",
-      " ที่ผู้เล่นกดปุ่มเข้าสู่ระบบครั้งแรก",
+      "ที่ผู้เล่นเข้ามาในหน้าเข้าสู่ระบบ",
+      "ที่ผู้เล่นกดปุ่มเข้าสู่ระบบครั้งแรก",
     ],
     show: false,
     labels: {

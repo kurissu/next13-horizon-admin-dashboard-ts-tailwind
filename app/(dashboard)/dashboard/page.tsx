@@ -60,16 +60,18 @@ const MiniCalendar = dynamic(
 type Props = {};
 
 const DashboardPage: FC<Props> = () => {
-  const temp = [{
-    name: "Revenue",
-    data: [50, 64, 48, 66, 49, 68],
-    color: "#764B27",
-  },
-   {
-    name: "Profit",
-    data: [30, 40, 24, 46, 20, 46],
-    color: "#CA884D",
-  },]
+  const temp = [
+    {
+      name: "Revenue",
+      data: [50, 64, 48, 66, 49, 68],
+      color: "#764B27",
+    },
+    {
+      name: "Profit",
+      data: [30, 40, 24, 46, 20, 46],
+      color: "#CA884D",
+    },
+  ];
   return (
     <>
       {/* Card widget */}
@@ -129,57 +131,57 @@ const DashboardPage: FC<Props> = () => {
       {/* Charts */}
       <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
         {/* <DailyTraffic title={'ผู้เล่นใช้เวลาตัดสินใจกี่วินาทีเพื่อที่จะกดปุ่ม เข้าสู่ระบบ'}/>    */}
-        <MultiBar title={"ผู้เล่นใช้เวลาตัดสินใจกี่วินาทีเพื่อที่จะกดปุ่ม เข้าสู่ระบบ"} data={[
-  {
-    name: "เพศชายในประเภทที่ 1 ใช่เวลาค่าเฉลี่ยกี่วินาที",
-    data: [300, 50],
-    color: "#0a0a0a",
-  },
-  {
-    name: "เพศชายในประเภทที่ 2 ใช้เวลาค่าเฉลี่ยกี่วินาที",
-    data: [400, 100],
-    color: "#171717",
-  },
-  {
-    name: "เพศชายในประเภทที่ 3 ใช้เวลาค่าเฉลี่ยกี่วินาที",
-    data: [500, 23],
-    color: "#262626",
-  },
-  {
-    name: "เพศหญิงในประเภทที่ 1 ใช้เวลาค่าเฉลี่ยกี่วินาที",
-    data: [600, 50],
-    color: "#404040",
-  },
-  {
-    name: "เพศหญิงในประเภทที่ 2 ใช้เวลาค่าเฉลี่ยกี่วินาที",
-    data: [700, 344],
-    color: "#52525b",
-  },
-  {
-    name: "เพศหญิงในประเภทที่ 3 ใช้เวลาค่าเฉลี่ยกี่วินาที",
-    data: [800, 800],
-    color: "#71717a",
-  },
+        <MultiBar
+          title={"ผู้เล่นใช้เวลาตัดสินใจกี่วินาทีเพื่อที่จะกดปุ่ม เข้าสู่ระบบ"}
+          data={[
+            {
+              name: "เพศชายในประเภทที่ 1 ใช่เวลาค่าเฉลี่ยกี่วินาที",
+              data: [300, 50],
+              color: "#0a0a0a",
+            },
+            {
+              name: "เพศชายในประเภทที่ 2 ใช้เวลาค่าเฉลี่ยกี่วินาที",
+              data: [400, 100],
+              color: "#171717",
+            },
+            {
+              name: "เพศชายในประเภทที่ 3 ใช้เวลาค่าเฉลี่ยกี่วินาที",
+              data: [500, 23],
+              color: "#262626",
+            },
+            {
+              name: "เพศหญิงในประเภทที่ 1 ใช้เวลาค่าเฉลี่ยกี่วินาที",
+              data: [600, 50],
+              color: "#404040",
+            },
+            {
+              name: "เพศหญิงในประเภทที่ 2 ใช้เวลาค่าเฉลี่ยกี่วินาที",
+              data: [700, 344],
+              color: "#52525b",
+            },
+            {
+              name: "เพศหญิงในประเภทที่ 3 ใช้เวลาค่าเฉลี่ยกี่วินาที",
+              data: [800, 800],
+              color: "#71717a",
+            },
+          ]}
+          categories={barChartOptionsWeeklyRevenue}
+        />
 
-]}
-categories={barChartOptionsWeeklyRevenue}
-/>
-
-        {/* <PieChartCard  title={'ผู้เล่นใช้เวลาตัดสินใจกี่วินาทีเพื่อที่จะกดปุ่ม เข้าสู่ระบบ'} /> */}
         <TotalSpent
           title={"จำนวนผู้เล่นที่เข้าสู่ระบบสำเร็จในครั้งแรก"}
           total={"37.5K"}
-          data={[{
-            name: "Revenue",
-            data: [50, 64, 48, 66, 49, 68],
-            color: "#764B27",
-          }]}
+          data={[
+            {
+              name: "Revenue",
+              data: [50, 64, 48, 66, 49, 68],
+              color: "#764B27",
+            },
+          ]}
         />
-        {/* <DonutChart title={"เวลาของผู้เล่นที่เลือกจะ challange หลังจากที่สามารถทำได้แล้ว"}/>
-            <TestLineChart title={'วันไหนในสัปดาห์คนนิยมเล่นเยอะที่สุด (จันทร์/อังคาร/พุธ/พฤหัส/ศุกร์/เสาร์/อาทิตย์) ใน 1 สัปดาห์'} /> */}
+
       </div>
       <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
-        {/* <WeeklyRevenue /> */}
         <PieChartCard
           title={"ผู้เล่นใช้เวลาตัดสินใจกี่วินาทีก่อนจะเลือกเมนู"}
           data={[23, 7, 70]}
@@ -194,19 +196,24 @@ categories={barChartOptionsWeeklyRevenue}
 
       {/* Tables & Charts */}
       <div className="mt-5 grid grid-cols-1 gap-5 xl:grid-cols-2">
-        <DailyTraffic title={"จำนวนผู้เล่นที่ผ่าน หรือไม่ผ่านในระดับต่างๆ"} data={[{
-    name: "Daily Traffic",
-    data: [20, 30, 40, 20]
-  }]} 
-  categories={barChartOptionsDailyTraffic}
-
-  />
+        <DailyTraffic
+          title={"จำนวนผู้เล่นที่ผ่าน หรือไม่ผ่านในระดับต่างๆ"}
+          data={[
+            {
+              name: "Daily Traffic",
+              data: [20, 30, 40, 20],
+            },
+          ]}
+          categories={barChartOptionsDailyTraffic}
+        />
         <DailyTraffic
           title={"จำนวนผู้เล่นที่ challange สำเร็จ หรือไม่สำเร็จในระดับต่างๆ"}
-          data={[{
-            name: "Daily Traffic",
-            data: [20, 30, 40, 20]
-          }]}
+          data={[
+            {
+              name: "Daily Traffic",
+              data: [20, 30, 40, 20],
+            },
+          ]}
           categories={barChartOptionsDailyTraffic2}
         />
         {/* Check Table */}
@@ -247,10 +254,12 @@ categories={barChartOptionsWeeklyRevenue}
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
           <DailyTraffic
             title={"เวลาที่ผู้เล่นดู หรืออยู่ในหน้าสรุปผลการเล่นของรอบนั้นๆ"}
-            data={[{
-              name: "Daily Traffic",
-              data: [20, 30, 40, 20, 40, 12]
-            }]}
+            data={[
+              {
+                name: "Daily Traffic",
+                data: [20, 30, 40, 20, 40, 12],
+              },
+            ]}
             categories={barChartOptionsDailyTraffic3}
           />
         </div>
@@ -267,83 +276,98 @@ categories={barChartOptionsWeeklyRevenue}
               "วันไหนในสัปดาห์คนนิยมเล่นเยอะที่สุด (จันทร์/อังคาร/พุธ/พฤหัส/ศุกร์/เสาร์/อาทิตย์) ใน 1 สัปดาห์"
             }
             data={{
-              labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"],
-              datasets: [{
+              labels: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ],
+              datasets: [
+                {
                   data: [86, 114, 106, 106, 107, 111, 133],
                   label: "Male T1",
                   borderColor: "rgb(62,149,205)",
                   backgroundColor: "rgb(62,149,205,0.1)",
-              }, {
+                },
+                {
                   data: [40, 100, 44, 70, 63, 30, 10],
                   label: "Male T2",
                   borderColor: "rgb(60,186,159)",
                   backgroundColor: "rgb(60,186,159,0.1)",
-              }, {
+                },
+                {
                   data: [10, 21, 60, 44, 17, 21, 17],
                   label: "Male T3",
                   borderColor: "rgb(255,165,0)",
                   backgroundColor: "rgb(255,165,0,0.1)",
-              }, {
+                },
+                {
                   data: [6, 3, 2, 2, 7, 0, 16],
                   label: "Female T1",
                   borderColor: "rgb(196,88,80)",
                   backgroundColor: "rgb(196,88,80,0.1)",
-              }, {
+                },
+                {
                   data: [2, 42, 22, 32, 37, 20, 16],
                   label: "Female T2",
                   borderColor: "rgb(21,99,0)",
                   backgroundColor: "rgb(196,88,80,0.1)",
-              }
-              ]
-          }}
+                },
+              ],
+            }}
           />
         </div>
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
-          <TestLineChart2 title={"ผู้เล่นส่นใจเกมมากน้อยเพียงใด"} data={{
-                labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"],
-                datasets: [{
-                    data: [86, 114, 106, 106, 107, 111, 133],
-                    label: "Male T1",
-                    borderColor: "rgb(62,149,205)",
-                    backgroundColor: "rgb(62,149,205,0.1)",
-                }, {
-                    data: [40, 100, 44, 70, 63, 30, 10],
-                    label: "Male T2",
-                    borderColor: "rgb(60,186,159)",
-                    backgroundColor: "rgb(60,186,159,0.1)",
-                }, {
-                    data: [10, 21, 60, 44, 17, 21, 17],
-                    label: "Male T3",
-                    borderColor: "rgb(255,165,0)",
-                    backgroundColor: "rgb(255,165,0,0.1)",
-                }, {
-                    data: [6, 3, 2, 2, 7, 0, 16],
-                    label: "Female T1",
-                    borderColor: "rgb(196,88,80)",
-                    backgroundColor: "rgb(196,88,80,0.1)",
-                }, {
-                    data: [2, 42, 22, 32, 37, 20, 16],
-                    label: "Female T2",
-                    borderColor: "rgb(21,99,0)",
-                    backgroundColor: "rgb(196,88,80,0.1)",
-                }
-                ]
-            }} />
+          <TestLineChart2
+            title={"ผู้เล่นส่นใจเกมมากน้อยเพียงใด"}
+            data={{
+              labels: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ],
+              datasets: [
+                {
+                  data: [86, 114, 106, 106, 107, 111, 133],
+                  label: "Male T1",
+                  borderColor: "rgb(62,149,205)",
+                  backgroundColor: "rgb(62,149,205,0.1)",
+                },
+                {
+                  data: [40, 100, 44, 70, 63, 30, 10],
+                  label: "Male T2",
+                  borderColor: "rgb(60,186,159)",
+                  backgroundColor: "rgb(60,186,159,0.1)",
+                },
+                {
+                  data: [10, 21, 60, 44, 17, 21, 17],
+                  label: "Male T3",
+                  borderColor: "rgb(255,165,0)",
+                  backgroundColor: "rgb(255,165,0,0.1)",
+                },
+                {
+                  data: [6, 3, 2, 2, 7, 0, 16],
+                  label: "Female T1",
+                  borderColor: "rgb(196,88,80)",
+                  backgroundColor: "rgb(196,88,80,0.1)",
+                },
+                {
+                  data: [2, 42, 22, 32, 37, 20, 16],
+                  label: "Female T2",
+                  borderColor: "rgb(21,99,0)",
+                  backgroundColor: "rgb(196,88,80,0.1)",
+                },
+              ],
+            }}
+          />
         </div>
-
-        {/* Complex Table , Task & Calendar */}
-        {/* <ComplexTable
-                    columnsData={columnsDataComplex}
-                    tableData={tableDataComplex}
-                /> */}
-
-        {/* Task chart & Calendar */}
-        {/* <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-                    <TaskCard />
-                    <div className="grid grid-cols-1 rounded-[20px]">
-                        <MiniCalendar />
-                    </div>
-                </div> */}
       </div>
     </>
   );

@@ -5,6 +5,7 @@ import {
   MdBarChart,
   MdPerson,
   MdGames,
+  MdPrivacyTip,
 } from "react-icons/md";
 
 const routes = [
@@ -20,6 +21,12 @@ const routes = [
     path: "game",
     icon: <MdGames className="h-6 w-6" />,
   },
+  {
+    name: "Privacy Policy",
+    layout: "/dashboard",
+    path: "privacy-policy",
+    icon: <MdPrivacyTip className="h-6 w-6" />,
+  }
   // {
   //   name: "NFT Marketplace",
   //   layout: "/dashboard",
