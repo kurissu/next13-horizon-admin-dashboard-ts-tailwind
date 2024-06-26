@@ -533,8 +533,8 @@ export const pieChart2Options2 = {
 };
 export const pieChart2Options3 = {
   labels: [
-    "Reaction 60 sec",
-    "Reaction Slower than 60 sec",
+    "Reaction > 60 sec",
+    "Reaction < 60 sec",
     "No Reaction",
   ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
@@ -580,8 +580,8 @@ export const pieChart2Options3 = {
 };
 export const pieChart2Options4 = {
   labels: [
-    "Reaction 60 sec",
-    "Reaction Slower than 60 sec",
+    "Reaction > 60 sec",
+    "Reaction < 60 sec",
     "No Reaction",
   ],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
@@ -670,8 +670,8 @@ export const barChartOptionsWeeklyRevenue = {
   },
   xaxis: {
     categories: [
-      "ที่ผู้เล่นเข้ามาในหน้าเข้าสู่ระบบ",
-      "ที่ผู้เล่นกดปุ่มเข้าสู่ระบบครั้งแรก",
+      "User Enter the Application",
+      "User First Time Visit",
     ],
     show: false,
     labels: {

@@ -226,9 +226,9 @@ const DashboardPage: FC<Props> = () => {
             title={
               "เวลาของผู้เล่นที่เลือกจะ challange หลังจากที่สามารถทำได้แล้ว"
             }
-            data={[23, 7, 70]}
+            data={[30, 70]}
             labels={pieChart2Options1}
-            data2={[23, 7, 70]}
+            data2={[80, 20]}
             labels2={pieChart2Options2}
           />
         </div>
@@ -238,22 +238,22 @@ const DashboardPage: FC<Props> = () => {
           {/* <DailyTraffic /> */}
           <PieChartCard2
             title={"เวลาที่ผู้เล่นดู หรืออยู่ในหน้าสรุปผลการเล่นของรอบนั้นๆ"}
-            data={[23, 7, 70]}
+            data={[30, 70]}
             labels={pieChart2Options3}
-            data2={[23, 7, 70]}
+            data2={[80, 20]}
             labels2={pieChart2Options4}
           />
         </div>
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
           <DonutChart
             title={
-              "เวลาของผู้เล่นที่เลือกจะ challange หลังจากที่สามารถทำได้แล้ว"
+              "จำนวนผู้เล่นที่กดเล่นใหม่หลังจากจบเกม"
             }
           />
         </div>
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
           <DailyTraffic
-            title={"เวลาที่ผู้เล่นดู หรืออยู่ในหน้าสรุปผลการเล่นของรอบนั้นๆ"}
+            title={"เวลาที่ผู้เล่นดู หรืออยู่ในหน้า Leaderboard"}
             data={[
               {
                 name: "Daily Traffic",

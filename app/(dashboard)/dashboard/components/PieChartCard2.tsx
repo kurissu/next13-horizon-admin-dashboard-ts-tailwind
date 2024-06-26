@@ -75,17 +75,7 @@ const PieChartCard = ({ title,data,labels,data2,labels2 }: IProps) => {
           </p>
         </div>
 
-        <div className="h-11 w-px bg-gray-300 dark:bg-white/10" />
 
-        <div className="flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center">
-            <div className="h-2 w-2 rounded-full bg-[#e57a75]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">{labels.labels[2]}</p>
-          </div>
-          <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
-            {data[2]}%
-          </p>
-        </div>
 
         <div className="h-11 w-px border-2 border-black dark:bg-white/10" />
 
@@ -112,17 +102,8 @@ const PieChartCard = ({ title,data,labels,data2,labels2 }: IProps) => {
           </p>
         </div>
 
-        <div className="h-11 w-px bg-gray-300 dark:bg-white/10" />
 
-        <div className="flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center">
-            <div className="h-2 w-2 rounded-full bg-[#e57a75]" />
-            <p className="ml-1 text-sm font-normal text-gray-600">{labels2.labels[2]}</p>
-          </div>
-          <p className="mt-px text-xl font-bold text-navy-700 dark:text-white">
-            {data[2]}%
-          </p>
-        </div>
+    
       </div>
     </Card>
   );
