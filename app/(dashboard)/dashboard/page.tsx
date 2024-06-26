@@ -263,13 +263,13 @@ const DashboardPage: FC<Props> = () => {
             categories={barChartOptionsDailyTraffic3}
           />
         </div>
-        <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
-          <TotalSpent
+        {/* <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1"> */}
+          {/* <TotalSpent
             title={"จำนวนผู้เล่นที่กดเล่นใหม่หลังจากจบเกม"}
             total={"37.5K"}
             data={temp}
-          />
-        </div>
+          /> */}
+        {/* </div> */}
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
           <TestLineChart
             title={
@@ -322,7 +322,7 @@ const DashboardPage: FC<Props> = () => {
         </div>
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-1">
           <TestLineChart2
-            title={"ผู้เล่นส่นใจเกมมากน้อยเพียงใด"}
+            title={"ผู้เล่นสนใจเกมมากน้อยเพียงใด"}
             data={{
               labels: [
                 "Monday",
