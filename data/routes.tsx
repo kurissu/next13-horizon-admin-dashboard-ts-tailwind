@@ -15,12 +15,12 @@ const routes = [
     path: "dashboard",
     icon: <MdHome className="h-6 w-6" />,
   },
-  // {
-  //   name: "Main Game",
-  //   layout: "/dashboard",
-  //   path: "game",
-  //   icon: <MdGames className="h-6 w-6" />,
-  // },
+  {
+    name: "Main Game",
+    layout: "/dashboard",
+    path: "game",
+    icon: <MdGames className="h-6 w-6" />,
+  },
   // {
   //   name: "Privacy Policy",
   //   layout: "/dashboard",
